@@ -10,6 +10,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(InGameHud.class)
 public class miltonGameHudMixin {
-	@Inject(method = "render", at = @At("RETURN"), cancellable = true)
+	@Inject(method = "render", at = @At("RETURN"))
 	private void onRender(DrawContext context, float tickDelta, CallbackInfo ci) {}
 }
